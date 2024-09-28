@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button, Table } from 'react-bootstrap';
-import axios from '/axiosConfig'; 
+import axios from '../../../axiosConfig';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import $ from 'jquery'; 

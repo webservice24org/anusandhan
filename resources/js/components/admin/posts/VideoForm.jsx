@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import axios from '/axiosConfig'; 
+import axios from '../../../axiosConfig'; 
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 

@@ -8,12 +8,28 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-import AdminLayout from './layouts/admin/AdminLayout';
-import AdminDashboard from './components/admin/AdminDashboard';
 import HomePage from './components/frontend/HomePage';
 import FrontendLayout from './layouts/frontend/FrontendLayout';
+
+import AdminLayout from './layouts/admin/AdminLayout';
+import AdminDashboard from './components/admin/AdminDashboard';
+import AuthRole from './components/admin/auth/AuthRole';
+import UserPermissions from './components/admin/auth/UserPermissions';
+import Users from './components/admin/auth/Users';
+import Division from './components/admin/division/Division';
+import District from './components/admin/division/District';
+import Category from './components/admin/category/Category';
+import SubCategory from './components/admin/category/SubCategory';
+import Tags from './components/admin/category/Tags';
 import PostList from './components/admin/posts/PostList';
 import PostForm from './components/admin/posts/PostForm';
+import VideoNews from './components/admin/posts/VideoNews';
+import VideoForm from './components/admin/posts/VideoForm';
+import HeaderInfo from './components/admin/settings/HeaderInfo';
+import FooterInfo from './components/admin/settings/FooterInfo';
+import Menu from './components/admin/settings/Menu';
+import SubMenu from './components/admin/settings/SubMenu';
+import Advertising from './components/admin/advertising/Advertising';
 
 const router = createBrowserRouter([
   {
@@ -25,9 +41,26 @@ const router = createBrowserRouter([
         element: <AdminLayout />,
         children: [
           { path: "", element: <AdminDashboard /> },
+          { path: "role", element: <AuthRole /> },
+          { path: "permission", element: <UserPermissions /> },
+          { path: "users", element: <Users /> },
+          { path: "division", element: <Division /> },
+          { path: "district", element: <District /> },
+          { path: "categories", element: <Category /> },
+          { path: "sub-categories", element: <SubCategory /> },
+          { path: "tags", element: <Tags /> },
           { path: "posts", element: <PostList /> },
           { path: "posts/create", element: <PostForm /> },
           { path: "posts/edit/:postId", element: <PostForm /> },
+          {path:"video-news", element:<VideoNews />},
+          {path:"video-news/create", element:<VideoForm />},
+          {path:"video-news/edit/:id", element:<VideoForm />},
+          {path:"header-settings", element:<HeaderInfo />},
+          {path:"footer-settings", element:<FooterInfo />},
+
+          {path:"menu-settings", element:<Menu />},
+          {path:"sub-menu-settings", element:<SubMenu />},
+          {path:"advertising", element:<Advertising />},
           
         ],
       },
