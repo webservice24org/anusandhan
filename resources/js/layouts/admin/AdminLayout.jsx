@@ -4,12 +4,12 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 
-// Import Bootstrap CSS
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Import custom styles
+
 import "../../../assets/admin/css/styles.css";
 
-// Import Bootstrap JavaScript and jQuery
+
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import $ from 'jquery';
 

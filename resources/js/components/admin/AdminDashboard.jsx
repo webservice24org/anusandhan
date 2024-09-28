@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     return (
         <AdminLayout>
             <h2>Dashboard Content</h2>
-            {/* Dashboard specific content here */}
+            
         </AdminLayout>
     );
 };
