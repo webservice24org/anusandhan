@@ -6,13 +6,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-
+import PrivateRoute from './components/PrivateRoute'; 
 
 import HomePage from './components/frontend/HomePage';
 import FrontendLayout from './layouts/frontend/FrontendLayout';
+import SinglePost from './components/frontend/SinglePost';
+import SingleVideo from './components/frontend/SingleVideo';
+import CategoryPost from './components/frontend/CategoryPost';
+import SubCategoryPost from './components/frontend/SubCategoryPost';
+import DivisionPosts from './components/frontend/DivisionPosts';
+import DistrictPosts from './components/frontend/DistrictPosts';
 
 import AdminLayout from './layouts/admin/AdminLayout';
 import AdminDashboard from './components/admin/AdminDashboard';
+
 import AuthRole from './components/admin/auth/AuthRole';
 import UserPermissions from './components/admin/auth/UserPermissions';
 import Users from './components/admin/auth/Users';
@@ -34,7 +41,7 @@ import Advertising from './components/admin/advertising/Advertising';
 const router = createBrowserRouter([
   {
     path: "/admin",
-    //element: <PrivateRoute />, 
+    element: <PrivateRoute />, 
     children: [
       {
         path: "/admin",
@@ -62,6 +69,7 @@ const router = createBrowserRouter([
           {path:"sub-menu-settings", element:<SubMenu />},
           {path:"advertising", element:<Advertising />},
           
+          
         ],
       },
     ],
@@ -71,7 +79,12 @@ const router = createBrowserRouter([
     element: <FrontendLayout />,
     children: [
       { path: "/", element: <HomePage /> },
-      
+      { path: "/post/:postId", element: <SinglePost /> }, 
+      { path: "/video-news/:id", element: <SingleVideo /> }, 
+      { path: "/category/:categoryId/posts", element: <CategoryPost /> }, 
+      { path: "/category/:categoryId/subcategory/:subcatId/posts", element: <SubCategoryPost /> }, 
+      { path: "/division/:divisionId/posts", element: <DivisionPosts /> }, 
+      { path: "/district/:districtId/posts", element: <DistrictPosts /> }, 
     ],
   },
 ]);

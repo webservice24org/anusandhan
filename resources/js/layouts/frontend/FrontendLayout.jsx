@@ -7,10 +7,12 @@ import Modal from './Modal';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Import custom styles
+import "../../../assets/frontend/css/fontawesome.min.css";
 import "../../../assets/frontend/css/mainstyles.css";
 
 // Import Bootstrap JavaScript and jQuery
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "../../../assets/frontend/js/font-all.min.js";
 import $ from 'jquery';
 
 const FrontendLayout = () => {
