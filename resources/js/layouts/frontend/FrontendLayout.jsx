@@ -4,16 +4,18 @@ import Header from './Header';
 import SinglePostHeader from './SinglePostHeader'; 
 import Footer from './Footer';
 import Modal from './Modal';
+import axios from '../../axiosConfig';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-// Import custom styles
+// Import Bootstrap and other styles
+//import 'bootstrap/dist/css/bootstrap.min.css'; 
 import "../../../assets/frontend/css/fontawesome.min.css";
 import "../../../assets/frontend/css/mainstyles.css";
 
-// Import Bootstrap JavaScript and jQuery
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../../../assets/frontend/js/font-all.min.js";
-import $ from 'jquery';
+
+// Import jQuery if needed (though it's not usually required in React)
 
 const FrontendLayout = () => {
   const location = useLocation();

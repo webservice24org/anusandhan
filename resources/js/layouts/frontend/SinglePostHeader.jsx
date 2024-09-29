@@ -1,8 +1,8 @@
 // src/layouts/frontend/SinglePostHeader.jsx
 import React, { useState, useEffect } from 'react';
-//import TopVideo from "../../components/frontend/TopVideo";
 import axios from '../../axiosConfig';
 import { Link } from "react-router-dom";
+import TopVideo from '../../components/frontend/TopVideo';
 
 const SinglePostHeader = () => {
     const [headerData, setHeaderData] = useState(null);
@@ -70,7 +70,7 @@ const SinglePostHeader = () => {
                     </div>
                     <div className="col-sm-8 pt-3">
                         <div className="row">
-                           
+                           <TopVideo />
                         </div>
                     </div>
                 </div>
@@ -120,38 +120,7 @@ const SinglePostHeader = () => {
             </div>
             
         </div>
-        <div className="mobile_manu">
-            <div className="mobile_manu_top">
-                <a href="index.html"><i className="fas fa-home"></i></a>
-                <i className="fas fa-times time_right"></i>
-            </div>
-            <ul>
-                <li><a href="All page/national.html">জাতীয়</a></li>
-                <li><a href="All page/politics.html">রাজনীতি</a></li>
-                <li><a href="All page/game.html">খেলাধুলা</a></li>
-                <li><a href="All page/entertainment.html">বিনোদন</a></li>
-                <li><a href="All page/comercial.html">অর্থনীতি</a></li>
-                <li><a href="All page/over-country.html">দেশজুড়ে</a></li>
-                <li><a href="All page/internation.html">আন্তর্জাতিক</a></li>
-                <li><a href="All page/expression.html">মতামত</a></li>
-                <li><a href="All page/photogallery.html">ফটোগ্যালারি</a></li>
-                <li><a href="All page/features.html">ফিচার</a></li>
-                <li><a href="All page/lifestyle.html">লাইফস্টাইল</a></li>
-                <li><a href="All page/ict.html">অথ্যপ্রযুক্তি</a></li>
-                <li><a href="All page/travel.html">ভ্রমণ</a></li>
-                <li><a href="All page/agriculture.html">কৃষি ও প্রকৃতি</a></li>
-                <li><a href="All page/job.html">জোক্স</a></li>
-                <li><a href="All page/ekushe.html">একুশে বইমেলা</a></li>
-                <li><a href="All page/education.html">শিক্ষা</a></li>
-                <li><a href="All page/campus.html">ক্যাম্পাস</a></li>
-                <li><a href="All page/health.html">স্বাস্থ্য</a></li>
-                <li><a href="All page/high-court.html">আইন-আদালত</a></li>
-                <li><a href="All page/religion.html">ধর্ম</a></li>
-                <li><a href="All page/about.html">প্রবাস</a></li>
-                <li><a href="All page/news-mediam.html">গণমাধ্যম</a></li>
-                <li><a href="All page/children.html">নারী ও শিশু</a></li>
-            </ul>
-        </div>
+        
 
     </header>
   );

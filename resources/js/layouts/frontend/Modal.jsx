@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from '../../axiosConfig';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Modal = () => {
   const [headerData, setHeaderData] = useState(null);
   const [email, setEmail] = useState('');
@@ -12,7 +14,7 @@ const Modal = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    try {
+    
       const response = await axios.post('/api/auth/login', { email, password });
 
       if (response.data.message === "Login successful") {
@@ -21,14 +23,12 @@ const Modal = () => {
         const loginModal = document.getElementById('loginModal');
         const modal = bootstrap.Modal.getInstance(loginModal);
         modal.hide();
-        navigate('/admin/');
+        navigate('/admin');
 
       } else {
         toast.error('Invalid credentials');
       }
-    } catch (err) { 
-      toast.error('An error occurred during login', err);
-    }
+    
   };
 
   useEffect(() => {

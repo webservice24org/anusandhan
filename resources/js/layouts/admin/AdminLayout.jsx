@@ -5,13 +5,13 @@ import Footer from './Footer';
 import Sidebar from './Sidebar';
 
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "../../../assets/admin/css/styles.css";
 
 
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import $ from 'jquery';
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 const AdminLayout = ({ children }) => {
 

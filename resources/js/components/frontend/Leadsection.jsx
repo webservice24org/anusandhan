@@ -55,10 +55,13 @@ const Leadsection = () => {
       <div
         className="header_section_bg bg_css"
         style={{ 
-          background: `url(${axiosInstance.defaults.baseURL}storage/post/${post ? post.post_thumbnail : 'default-thumbnail.jpg'}) no-repeat center center`,
+          backgroundImage: `url(${axiosInstance.defaults.baseURL}storage/post/${post ? post.post_thumbnail : 'default-thumbnail.jpg'})`,
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}
-      ></div>
+    ></div>
+
     </>
   );
 };
